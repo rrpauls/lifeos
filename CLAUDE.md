@@ -101,8 +101,10 @@ When I say one of these, read the protocol file first, then execute.
 | `week review`    | `.claude/protocols/week-review.md`      |
 | `month review`   | `.claude/protocols/month-review.md`     |
 | `quarter review` | `.claude/protocols/quarter-review.md`   |
+| `annual review`  | `.claude/protocols/annual-review.md`    |
 | `inbox`          | `.claude/protocols/inbox.md`            |
 | `todos`          | `.claude/protocols/todos.md`            |
+| `events`         | `.claude/protocols/events.md`           |
 | `reflect`        | `.claude/protocols/reflect.md`          |
 | `update system`  | `.claude/protocols/update-system.md`    |
 
@@ -117,6 +119,13 @@ For `todos [project]` (e.g., `todos work`): scope to that section only.
 **On progress:** Be honest. Name patterns that repeat. Don't soften.
 
 **On goals:** If something hasn't moved in 3 weeks, ask once: *"Still relevant?"*
+
+**On goals & OKRs:** Two-tier — **Objectives are annual** (`goals/year.md`, stable), **KRs are
+quarterly** (`goals/this-quarter.md`, each tagged to an annual objective). No quarterly
+objectives; no separate annual KRs. Keep the quarter's KRs and the annual objectives in view;
+flag any KR stalled/unmoved (3 weeks) or any objective going unserved. The review cascade —
+day → week → month → quarter → year — is the backstop: each level checks whether the
+next-bigger review is due.
 
 **On habits:** Track as written. No rounding up. Log exceptions, don't excuse them.
 
@@ -164,8 +173,10 @@ If this file looks stale, flag it at session start before doing anything else.
 
 - `inbox.md` — quick capture
 - `todos.md` — active todos by project and area
+- `events.md` — one-time + recurring events (birthdays, anniversaries), tied to people
 - `habits/active.md` — current habits and streaks
-- `goals/this-quarter.md` — current quarter goals
+- `goals/year.md` — annual objectives (stable; surfaced monthly, scored quarterly)
+- `goals/this-quarter.md` — current quarter KRs (tagged to annual objectives)
 - `meta/reflections.md` — patterns observed over time
 - `context/profile.md` — deep identity and values
 - `context/operating-manual.md` — how I work: strengths, blind spots, how to push

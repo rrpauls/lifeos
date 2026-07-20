@@ -5,6 +5,10 @@ Run on Sundays or the last workday of the week.
 1. Read all daily review files from this week in `reviews/daily/`
 2. Calculate habit completion rates from `habits/log/` files for the week
 3. Cross-check week's output against current quarter goals
+3a. **KR check.** Restate this quarter's KRs (from `goals/this-quarter.md`) and the annual
+    objective each serves (`goals/year.md`). For each: what moved this week? Flag any KR
+    **stalled or unmoved for 3 weeks**, and any annual objective going unserved — plainly,
+    every week, until addressed. (Never let a goal go dark.)
 4. Sweep `todos.md` — flag any "This week" item that's been there more than 10 days.
    Ask once per flagged item: done, dropped, or still live?
 5. Identify: best day / hardest day / top win / top miss
@@ -49,3 +53,5 @@ Run on Sundays or the last workday of the week.
 
 11. Append pattern observations to `meta/reflections.md` (dated, specific)
 12. Propose one adjustment — habit, schedule, or priority — if the data warrants it
+13. **Cascade check.** If the month has just ended (this is its last week, or the first
+    weekly of a new month), tell the user the **month review is due**.

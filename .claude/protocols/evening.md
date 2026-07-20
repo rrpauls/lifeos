@@ -29,9 +29,16 @@
    ```
 
 6. If `inbox.md` has more than 3 unprocessed items, process them now
+7. **Cascade check.** If today is Friday or a weekend day, check whether this week's weekly
+   review exists in `reviews/weekly/`. If it doesn't, tell the user the **week review is due**
+   before the week closes. (The roll-up guard — a smaller review always checks whether the
+   next-bigger one is owed. See §Cascade note below.)
 
 Notes:
 - The State line is fixed-format so weekly/monthly reviews can read trends from it.
+- **Cascade note:** the review chain is day → week → month → quarter → year. Each level's
+  protocol ends by checking whether the next-bigger review is due, so nothing falls through.
+  Never silently skip a due roll-up — surface it.
 - The three scales are chosen at onboarding (defaults: energy, motivation, stress —
   rename to what matters: anxiety, focus, pain, whatever is live for this person).
   Keep them stable once chosen, or trends break.
