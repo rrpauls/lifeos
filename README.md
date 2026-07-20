@@ -1,84 +1,83 @@
 # LifeOS
 
-A personal operating system that lives as plain markdown files — and an AI that
-runs it with you.
+**A companion for running your life — and keeping it honest.**
 
-No app. No database. No account. Just text files in a folder, and [Claude
-Code](https://claude.com/claude-code) reading them at the start of every
-conversation. You talk; it keeps your life's structure honest, current, and in one
-place: your goals, habits, projects, weekly rhythm, and the running record of how
-things are actually going.
+Not a productivity app. A place where the whole picture of your life stays in view: what
+you're working toward, how you're actually doing, the people who matter, the season you're in
+— and an AI that sits with all of it and helps you show up to it. You talk to it like a person;
+it keeps the structure, remembers what you'd forget, and tells you the truth when a goal's gone
+quiet or a hard week is stacking up.
 
-## Why plain markdown
+## What it helps you do
 
-- **It's yours.** Everything stays in a folder on your machine. Nothing is uploaded,
-  nothing is locked in a product. Open it in any editor. Back it up however you like.
-- **It's legible.** You can read and edit every file by hand. No black box.
-- **It outlives any tool.** Markdown will open in fifty years. Your operating system
-  shouldn't depend on a company staying in business.
+- **Show up to what actually matters** — your goals laddered from the year down to this week,
+  so the big things don't get lost under the urgent ones.
+- **See the patterns you'd miss** — it keeps a running record and reads it back: the habit
+  that's slipping, the energy dip that tracks a bad week, the objective nothing's touched in a month.
+- **Never let a goal, or a date, go dark** — reviews roll up day → week → month → quarter →
+  year so nothing falls through, and it surfaces the birthdays and anniversaries before they
+  sneak up.
+- **Carry a hard season without it becoming a chore** — if you're grieving, ill, or just in a
+  heavy stretch, it reads your weeks through that lens: gently, no clinical framing, no treating
+  a low week as failure.
+
+## What's inside
+
+- **Goals** — a stable annual objective, and quarterly key results that ladder up to it.
+- **Habits** — what you're building, tracked honestly (a near-miss is a miss).
+- **Events** — birthdays, anniversaries, the dates tied to the people in your life, surfaced
+  with lead time.
+- **Projects, weekly rhythm, a frictionless inbox** — the working parts of a life.
+- **Reviews** — daily through annual, each one checking whether the next is due.
+- **The people in your life, your values, and the hard stuff** — the context that makes the
+  rest mean something.
+
+## How you use it, day to day
+
+Simple triggers, in plain language:
+
+| Say this        | And it…                                                        |
+|-----------------|----------------------------------------------------------------|
+| `morning`       | Starts the day — habits, today's focus, events, what's on       |
+| `evening`       | Closes it — wins, habits, a 10-second state check, carry-forward |
+| `week review`   | Reads the week, checks goals and habits, names patterns         |
+| `month` / `quarter` / `annual review` | Zooms out — the arc, the objectives, what's next |
+| `events`        | Shows what's coming and adds new dates                          |
+| `inbox` / `todos` | Clears what you dumped; sweeps the list                       |
+| `reflect`       | Reads back the patterns it's noticed over time                  |
+
+Full list lives in `CLAUDE.md`. The protocols behind each are in `.claude/protocols/` — plain
+markdown, edit them to taste.
 
 ## Get started
 
-1. **Get the files.** Download or clone this repo into a folder you like:
+1. **Get the files** — clone into a folder you like (iCloud/Dropbox if you want phone capture):
    ```
    git clone https://github.com/jeanjmauris/lifeos.git ~/lifeos
    cd ~/lifeos
    ```
-   (Tip: put it in iCloud Drive / Dropbox if you want phone access for quick capture.)
-
-2. **Open Claude Code** in that folder:
+2. **Open [Claude Code](https://claude.com/claude-code)** in that folder:
    ```
    claude
    ```
-
-3. **Say `hello`.** That's it. It'll walk you through setup — one question at a
-   time — and fill in your files as you talk. About five minutes to a working system.
-
-## How you use it day to day
-
-Once set up, you drive it with simple triggers:
-
-| Say this        | And it…                                              |
-|-----------------|------------------------------------------------------|
-| `morning`       | Quick start — habits, today's focus, what's on        |
-| `evening`       | Close the day — wins, habits, a 10-second state check (energy/motivation/stress), carry-forward |
-| `week review`   | Reviews the week, checks habits against goals, finds patterns |
-| `inbox`         | Processes whatever you dumped in `inbox.md`           |
-| `todos`         | Sweeps and updates your todo list                     |
-| `reflect`       | Reads back the patterns it's noticed over time        |
-
-Full list lives in `CLAUDE.md`. The protocols behind each are in
-`.claude/protocols/` — plain markdown, edit them to taste.
-
-## What's in here
-
-```
-CLAUDE.md            The core — who you are, your areas, projects, season, rhythm
-.claude/protocols/   The routines: morning, evening, reviews, onboarding
-todos.md             Active todos by project and area
-inbox.md             Frictionless capture
-habits/              Active habits + the daily log
-goals/               Annual vision, quarter goals, per-area goals
-projects/            One file per active project
-schedule/            Weekly themes and routines
-context/             Identity, values, the people in your life
-reviews/             Daily / weekly / monthly / quarterly review records
-meta/                Reflections, suggestions, changelog
-```
+3. **Say `hello`.** It walks you through setup, one question at a time — about five minutes to
+   a working system.
 
 ## Make it yours
 
-The whole thing is editable text. Change the protocols, rename the areas, add
-triggers, throw out what doesn't fit. The structure here is a starting point that
-works — not a doctrine. The best version of this is the one you actually keep.
+The whole thing is editable text. Rename the areas, rewrite the protocols, add triggers, throw
+out what doesn't fit. The structure is a starting point that works, not a doctrine. The best
+version is the one you actually keep.
 
-## A note on the hard stuff
+## Why it's plain markdown
 
-There's an optional *Sensitive Context* section in `CLAUDE.md`. If you carry
-something heavy — grief, illness, a hard season — you can tell the system, so it
-reads your weeks through that lens: gently, without clinical framing, without
-treating a low week as a failure. It's optional, and it's there because a life
-isn't only its productivity.
+No app, no database, no account — just text files in a folder that Claude Code reads at the
+start of every conversation.
+
+- **It's yours.** Everything stays on your machine. Nothing uploaded, nothing locked in a product.
+- **It's legible.** Read and edit every file by hand. No black box.
+- **It outlives any tool.** Markdown will open in fifty years. Your operating system shouldn't
+  depend on a company staying in business.
 
 ## License
 
