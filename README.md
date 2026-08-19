@@ -20,6 +20,13 @@ quiet or a hard week is stacking up.
 - **Carry a hard season without it becoming a chore** — if you're grieving, ill, or just in a
   heavy stretch, it reads your weeks through that lens: gently, no clinical framing, no treating
   a low week as failure.
+- **Start every session already known** — it reads your files before it asks you anything, so
+  check-ins open with the picture loaded, not a form. And when you correct how it works, the
+  correction is written into the system the same day: a fresh conversation tomorrow already
+  knows. You never re-explain yourself.
+- **End the workday when you say it ends** — declare the day over and it stops processing
+  work: a few more things get handled lightly, then everything else is parked in the inbox
+  for tomorrow, in one line. Family and wellbeing are always exempt — full presence, no counting.
 
 ## What's inside
 
@@ -27,6 +34,9 @@ quiet or a hard week is stacking up.
 - **Habits** — what you're building, tracked honestly (a near-miss is a miss).
 - **Events** — birthdays, anniversaries, the dates tied to the people in your life, surfaced
   with lead time.
+- **Finances** — a weekly money pulse: statements read and logged (parsed, never stored),
+  commitments tracked against plan, a monthly roll-up into your reviews. Numbers stay in
+  local files, git-ignored by default.
 - **Projects, weekly rhythm, a frictionless inbox** — the working parts of a life.
 - **Reviews** — daily through annual, each one checking whether the next is due.
 - **The people in your life, your values, and the hard stuff** — the context that makes the
@@ -39,10 +49,11 @@ Simple triggers, in plain language:
 | Say this        | And it…                                                        |
 |-----------------|----------------------------------------------------------------|
 | `morning`       | Starts the day — habits, today's focus, events, what's on       |
-| `evening`       | Closes it — wins, habits, a 10-second state check, carry-forward |
+| `evening`       | Closes it — wins, habits, a 10-second state check, a look at tomorrow |
 | `week review`   | Reads the week, checks goals and habits, names patterns         |
 | `month` / `quarter` / `annual review` | Zooms out — the arc, the objectives, what's next |
 | `events`        | Shows what's coming and adds new dates                          |
+| `finances`      | Weekly money check-in — balances, flags, one suggestion         |
 | `inbox` / `todos` | Clears what you dumped; sweeps the list                       |
 | `reflect`       | Reads back the patterns it's noticed over time                  |
 
