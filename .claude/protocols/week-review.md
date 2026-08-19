@@ -53,5 +53,9 @@ Run on Sundays or the last workday of the week.
 
 11. Append pattern observations to `meta/reflections.md` (dated, specific)
 12. Propose one adjustment — habit, schedule, or priority — if the data warrants it
+12a. **Archive the closed week.** Move the closed week's block from `todos.md` to
+    `meta/todo-archive-[YEAR].md` verbatim; leave only a one-line entry under a
+    "## Closed weeks" section in todos.md. The weekly review file holds the narrative;
+    the archive holds the raw task detail; `todos.md` holds ONLY live state — never history.
 13. **Cascade check.** If the month has just ended (this is its last week, or the first
     weekly of a new month), tell the user the **month review is due**.

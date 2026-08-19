@@ -24,6 +24,7 @@ reviews/weekly/*
 reviews/monthly/*
 reviews/quarterly/*
 habits/log/*
+finances/log/*
 
 # Keep the folders themselves tracked (so the structure ships)
 !reviews/daily/.gitkeep
@@ -31,3 +32,4 @@ habits/log/*
 !reviews/monthly/.gitkeep
 !reviews/quarterly/.gitkeep
 !habits/log/.gitkeep
+!finances/log/.gitkeep

@@ -16,6 +16,18 @@ Run on the last day of the month.
 5. Write `reviews/monthly/YYYY-MM.md` — include a `## State curve` section with
    the week-by-week numbers and one paragraph of reading
 6. Ask: "Is there a habit that should be retired, added, or scaled up?"
+6a. **Distill and rotate reflections.** Go through this month's entries in
+    `meta/reflections.md`: anything that has hardened into a durable rule graduates to
+    its home (`context/operating-manual.md` for how-I-work rules, `context/people.md`
+    for person-specific rules, the Current Season block for season-level rules) — state
+    each graduation to the user before writing it. Then move the month's raw entries to
+    `meta/reflections-archive-[YEAR].md`, keeping in `meta/reflections.md` only the
+    current month and a short "Active patterns" header (max ~10 lines) of what's still
+    being watched. Reflections is a capture buffer, not a warehouse.
+6b. **Finance roll-up.** If the finances system is in use, read the month's entries in
+    `finances/log/` (the last weekly entry carries the month summary). One paragraph in
+    the review: totals in/out, commitments progress, trend. If no entries exist, note
+    the gap — don't skip silently.
 7. Propose one edit to the Current Season block in CLAUDE.md if priorities have shifted
 8. **Cascade check.** If this is the last month of a quarter (Mar / Jun / Sep / Dec), tell the
    user the **quarter review is due**. If it's December, flag that the **annual review** is due

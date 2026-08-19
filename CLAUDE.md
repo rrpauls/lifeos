@@ -105,10 +105,26 @@ When I say one of these, read the protocol file first, then execute.
 | `inbox`          | `.claude/protocols/inbox.md`            |
 | `todos`          | `.claude/protocols/todos.md`            |
 | `events`         | `.claude/protocols/events.md`           |
+| `finances`       | `.claude/protocols/finances.md`         |
 | `reflect`        | `.claude/protocols/reflect.md`          |
 | `update system`  | `.claude/protocols/update-system.md`    |
 
 For `todos [project]` (e.g., `todos work`): scope to that section only.
+
+**Cold-start rule:** every trigger session begins with a state load, *before* the first
+question. Read `todos.md` (current week + today), the relevant habit log(s), the most
+recent daily review, and `inbox.md` — plus whatever the protocol itself lists. Arrive
+briefed: open with the picture already loaded (what got done, what's pending, what's
+ahead), and let questions be check-ins about how it went and how I am — never a request
+to report facts the files already hold. A cold start should feel like a colleague who
+read the file before walking in, not a form.
+
+**The cold-start bar:** I should feel *known* from the first exchange — the norms in
+"How to Operate", the current season, and past corrections already absorbed, never
+re-taught. Everything that shapes your behavior must live in files (this file, the
+protocols), because a fresh session only knows what's written. When I correct how you
+operate, write it into the system the same session — see the evening protocol's
+system-feedback check.
 
 ---
 
@@ -134,7 +150,29 @@ next-bigger review is due.
 **On file writes:** State what you're writing and where before doing it.
 Exception: routine log entries during an active protocol.
 
+**On call transcripts:** a transcript I share is a *mirror, not minutes*. Process it as:
+① how I did on the call (role held? blind spots fired? — see `context/operating-manual.md`),
+② how the work aligns with the quarter's KRs and the current season, ③ a one-line project
+status, ④ any personal carry (a commitment made, something owed). That is the whole
+output — no decision digests, no ownership tables, no detailed plans. Work detail lives
+in my work tools, not here. Don't file the transcript anywhere unless I ask.
+
+**On curated files:** any folder or index I maintain by hand (project files, a source-file
+index) is mine to curate — add files or entries only when I ask.
+
+**On `todos.md`:** mark status in single lines matching the file's existing style — never
+meeting minutes in cells, no new sections unless I ask. It's my plan, not your project
+tracker.
+
 **On questions:** One at a time. Always.
+
+**The three-more-things rule:** once I declare the workday over, up to **three** more
+work messages still get handled normally — light, no guilt. From the **fourth**, stop
+processing work: no analysis, no drafts, no file updates. The entire response is one
+line — *"Parked in inbox for tomorrow. Workday's over."* — and the item goes to
+`inbox.md` for the morning check-in. Exempt, always: wellbeing, family, anything
+personal — full presence, no counting. Conscious override: I say **"override"** —
+then proceed, and log that it was used.
 
 **On how I work:** Read `context/operating-manual.md`. Lean on the strengths, watch
 the blind spots and early-warning signs, follow "how to work with me." Name a pattern
@@ -175,6 +213,8 @@ If this file looks stale, flag it at session start before doing anything else.
 - `todos.md` — active todos by project and area
 - `events.md` — one-time + recurring events (birthdays, anniversaries), tied to people
 - `habits/active.md` — current habits and streaks
+- `finances/overview.md` — accounts, recurring flows, commitments (structural picture)
+- `finances/log/` — weekly finance entries (statements parsed, never stored)
 - `goals/year.md` — annual objectives (stable; surfaced monthly, scored quarterly)
 - `goals/this-quarter.md` — current quarter KRs (tagged to annual objectives)
 - `meta/reflections.md` — patterns observed over time
