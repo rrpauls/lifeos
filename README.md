@@ -1,95 +1,56 @@
 # LifeOS
 
-**A companion for running your life — and keeping it honest.**
+**A plain Markdown framework for working with the parts of life that matter to you.**
 
-Not a productivity app. A place where the whole picture of your life stays in view: what
-you're working toward, how you're actually doing, the people who matter, the season you're in
-— and an AI that sits with all of it and helps you show up to it. You talk to it like a person;
-it keeps the structure, remembers what you'd forget, and tells you the truth when a goal's gone
-quiet or a hard week is stacking up.
+LifeOS gives an AI agent a consistent structure for goals, routines, projects, important dates, and regular reviews. The files are editable Markdown, and the workflows are defined in a vendor-neutral core with adapters for supported agents.
 
-## What it helps you do
+## What it provides
 
-- **Show up to what actually matters** — your goals laddered from the year down to this week,
-  so the big things don't get lost under the urgent ones.
-- **See the patterns you'd miss** — it keeps a running record and reads it back: the habit
-  that's slipping, the energy dip that tracks a bad week, the objective nothing's touched in a month.
-- **Never let a goal, or a date, go dark** — reviews roll up day → week → month → quarter →
-  year so nothing falls through, and it surfaces the birthdays and anniversaries before they
-  sneak up.
-- **Carry a hard season without it becoming a chore** — if you're grieving, ill, or just in a
-  heavy stretch, it reads your weeks through that lens: gently, no clinical framing, no treating
-  a low week as failure.
-- **Start every session already known** — it reads your files before it asks you anything, so
-  check-ins open with the picture loaded, not a form. And when you correct how it works, the
-  correction is written into the system the same day: a fresh conversation tomorrow already
-  knows. You never re-explain yourself.
-- **End the workday when you say it ends** — declare the day over and it stops processing
-  work: a few more things get handled lightly, then everything else is parked in the inbox
-  for tomorrow, in one line. Family and wellbeing are always exempt — full presence, no counting.
+- A hierarchy for annual objectives and quarterly key results.
+- Routines and check-ins that can be adapted to the user.
+- Daily, weekly, monthly, quarterly, and annual review protocols.
+- A working inbox, tasks, projects, and important dates.
+- A cold-start approach that loads available state before asking questions.
+- Explicit rules for file updates, personal context, and one question at a time.
 
-## What's inside
+The framework is a starting point. Personalize an initialized copy to fit your needs.
 
-- **Goals** — a stable annual objective, and quarterly key results that ladder up to it.
-- **Habits** — what you're building, tracked honestly (a near-miss is a miss).
-- **Events** — birthdays, anniversaries, the dates tied to the people in your life, surfaced
-  with lead time.
-- **Finances** — a weekly money pulse: statements read and logged (parsed, never stored),
-  commitments tracked against plan, a monthly roll-up into your reviews. Numbers stay in
-  local files, git-ignored by default.
-- **Projects, weekly rhythm, a frictionless inbox** — the working parts of a life.
-- **Reviews** — daily through annual, each one checking whether the next is due.
-- **The people in your life, your values, and the hard stuff** — the context that makes the
-  rest mean something.
+## Architecture
 
-## How you use it, day to day
+`AGENTS.md` defines the shared behavior. `protocols/` contains the trigger workflows. Agent-specific files are thin adapters that direct each environment to the same core.
 
-Simple triggers, in plain language:
+| Agent | Adapter |
+|---|---|
+| Antigravity | `.agents/GEMINI.md` and `.agents/skills/` |
+| Claude Code | `CLAUDE.md` |
+| ChatGPT Web | `CHATGPT.md` |
+| Codex | `codex.md` |
+| OpenClaw | `SOUL.md`, `USER.md`, and `IDENTITY.md` |
+| Hermes | `meta/hermes-setup.md` |
 
-| Say this        | And it…                                                        |
-|-----------------|----------------------------------------------------------------|
-| `morning`       | Starts the day — habits, today's focus, events, what's on       |
-| `evening`       | Closes it — wins, habits, a 10-second state check, a look at tomorrow |
-| `week review`   | Reads the week, checks goals and habits, names patterns         |
-| `month` / `quarter` / `annual review` | Zooms out — the arc, the objectives, what's next |
-| `events`        | Shows what's coming and adds new dates                          |
-| `finances`      | Weekly money check-in — balances, flags, one suggestion         |
-| `inbox` / `todos` | Clears what you dumped; sweeps the list                       |
-| `reflect`       | Reads back the patterns it's noticed over time                  |
+The public reusable framework is [`rrpauls/lifeos`](https://github.com/rrpauls/lifeos), a fork of [`jeanjmauris/lifeos`](https://github.com/jeanjmauris/lifeos).
 
-Full list lives in `CLAUDE.md`. The protocols behind each are in `.claude/protocols/` — plain
-markdown, edit them to taste.
+## Setup
 
-## Get started
+Clone the framework and open its directory in an agent environment that can read and edit Markdown:
 
-1. **Get the files** — clone into a folder you like (iCloud/Dropbox if you want phone capture):
-   ```
-   git clone https://github.com/jeanjmauris/lifeos.git ~/lifeos
-   cd ~/lifeos
-   ```
-2. **Open [Claude Code](https://claude.com/claude-code)** in that folder:
-   ```
-   claude
-   ```
-3. **Say `hello`.** It walks you through setup, one question at a time — about five minutes to
-   a working system.
+```bash
+git clone https://github.com/rrpauls/lifeos.git ~/lifeos
+cd ~/lifeos
+```
+
+Read `AGENTS.md`, then use `hello` to personalize an initialized copy. Keep that personal instance in a private repository or a local environment you control. Do not commit initialized personal LifeOS state to this public framework repository.
+
+## Privacy
+
+LifeOS is stored as plain Markdown. Privacy depends on the environment where the agent runs. Never publish or commit personal state unintentionally. The tracked state directories and files are part of the framework's starter tree; they are not a safe destination for personal data in this public repository.
+
+The repository has no build step, runtime dependencies, or startup command. See [`CLOUD_SETUP.md`](CLOUD_SETUP.md) for cloud-environment notes.
 
 ## Make it yours
 
-The whole thing is editable text. Rename the areas, rewrite the protocols, add triggers, throw
-out what doesn't fit. The structure is a starting point that works, not a doctrine. The best
-version is the one you actually keep.
-
-## Why it's plain markdown
-
-No app, no database, no account — just text files in a folder that Claude Code reads at the
-start of every conversation.
-
-- **It's yours.** Everything stays on your machine. Nothing uploaded, nothing locked in a product.
-- **It's legible.** Read and edit every file by hand. No black box.
-- **It outlives any tool.** Markdown will open in fifty years. Your operating system shouldn't
-  depend on a company staying in business.
+After creating a private or local initialized copy, edit the life areas, files, and protocols to suit your needs. Keep `AGENTS.md` as the canonical behavior and maintain the thin adapters for whichever agents you use.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Use it, fork it, make it yours.
+MIT — see [LICENSE](LICENSE).
