@@ -1,0 +1,68 @@
+---
+name: lifeos-week-review
+description: >-
+  Activates on Sundays or the last workday of the week, or when the user requests a weekly review to analyze the past week's progress and set up the coming week.
+---
+> Read `AGENTS.md` (cold-start rule) before executing this protocol.
+
+# Protocol: week review
+
+Run on Sundays or the last workday of the week.
+
+1. Read all daily review files from this week in `reviews/daily/`
+2. Calculate habit completion rates from `habits/log/` files for the week
+3. Cross-check week's output against current quarter goals
+3a. **KR check.** Restate this quarter's KRs (from `goals/this-quarter.md`) and the annual
+    objective each serves (`goals/year.md`). For each: what moved this week? Flag any KR
+    **stalled or unmoved for 3 weeks**, and any annual objective going unserved — plainly,
+    every week, until addressed. (Never let a goal go dark.)
+4. Sweep `todos.md` — flag any "This week" item that's been there more than 10 days.
+   Ask once per flagged item: done, dropped, or still live?
+5. Identify: best day / hardest day / top win / top miss
+6. Read the State lines from the week's daily reviews. Average each scale, name the
+   trend in one line each ("stress 2→4, peaked Tuesday — deadline day"). Trends and
+   correlations, not judgments. If a difficult scale averaged at the bad end, say so
+   plainly and connect it to what the week held.
+7. If any habit completed less than 50% for two weeks running, flag it
+8. Check the week against `context/operating-manual.md` — did any blind spot or
+   early-warning sign fire? If so, name it plainly.
+9. If the *Sensitive Context* section in AGENTS.md is filled, ask once:
+   "How are you carrying everything this week?" — then wait. No frameworks.
+10. Write `reviews/weekly/YYYY-WNN.md` using this format:
+
+    ```
+    # Week Review — YYYY-WNN (DD Mon – DD Mon)
+
+    [One-paragraph honest read of the week.]
+
+    ## Wins / Losses
+    - Top win:
+    - Top miss:
+    - Best day: / Hardest day:
+
+    ## Habits
+    - [habit]: N/7 [+ streak note]
+
+    ## State trend
+    - energy avg N.N — [trend in one line]
+    - motivation avg N.N — [trend]
+    - stress avg N.N — [trend, with what drove the peaks]
+
+    ## Against the quarter
+    [2–3 lines: did the week serve the season's top focus areas?]
+
+    ## Patterns
+    [Anything that fired from the operating manual; recurring behaviours]
+
+    ## One adjustment
+    [The single proposed change — or "none warranted"]
+    ```
+
+11. Append pattern observations to `meta/reflections.md` (dated, specific)
+12. Propose one adjustment — habit, schedule, or priority — if the data warrants it
+12a. **Archive the closed week.** Move the closed week's block from `todos.md` to
+    `meta/todo-archive-[YEAR].md` verbatim; leave only a one-line entry under a
+    "## Closed weeks" section in todos.md. The weekly review file holds the narrative;
+    the archive holds the raw task detail; `todos.md` holds ONLY live state — never history.
+13. **Cascade check.** If the month has just ended (this is its last week, or the first
+    weekly of a new month), tell the user the **month review is due**.
